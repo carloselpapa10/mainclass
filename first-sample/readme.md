@@ -1,4 +1,4 @@
-#Spirng Cloud with Netflix Eureka - Sample
+Spirng Cloud with Netflix Eureka - Sample
 
 1. Spring boot
 2. Spring Cloud Eureka
