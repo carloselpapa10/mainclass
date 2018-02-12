@@ -2,7 +2,7 @@
 
 Software Development - Microservices Architecture
 
-This repo aims to check some technologies used to build projects related to Microservices Architecture. 
+This repo aims to check some technologies used to build projects related to Microservices Architecture. It means, instead of building a monolithic application, the idea is to split it into set of smaller interconntected services. 
 
 The following list shows some of them. 
 
