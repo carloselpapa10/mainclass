@@ -1,0 +1,15 @@
+package com.mainclass.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.mainclass.services.RemoteCallService;
+
+@Controller
+public class ConsumerControllerClient {
+
+	@Autowired
+	private RemoteCallService loadBalancer;
+	
+	
+}

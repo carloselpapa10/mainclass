@@ -1,0 +1,5 @@
+package com.mainclass.swagger;
+
+public class SwaggerConfig {
+
+}

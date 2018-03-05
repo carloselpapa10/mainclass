@@ -1,0 +1,9 @@
+server.port=8079
+
+#docker
+#eureka.client.serviceUrl.defaultZone=http://localhost:8090/eureka
+#zuul.routes.producer.url=http://localhost:8070
+
+#local
+zuul.routes.producer.url=http://localhost:8070
+eureka.client.serviceUrl.defaultZone=http://localhost:8090/eureka

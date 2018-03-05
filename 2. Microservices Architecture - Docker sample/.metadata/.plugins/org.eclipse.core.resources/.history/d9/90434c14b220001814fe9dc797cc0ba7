@@ -1,0 +1,5 @@
+package com.mainclass.controllers;
+
+public class ConsumerControllerClient {
+
+}
