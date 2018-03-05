@@ -6,7 +6,7 @@ Spring Boot + Docker
 Maven
 Swagger UI
 
-Note: this development is based on the first sample (i.e. 1. Microservices Architecture - Sample).
+Note: this development is based on the first sample (i.e. 1. Sample).
 The image architecture.jpg shows the relations between the services.
 
 Building and Running
