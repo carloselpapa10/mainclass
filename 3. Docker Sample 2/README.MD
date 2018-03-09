@@ -1,5 +1,5 @@
 # mainclass
-### Spring Boot + Docker
+### Spring Boot + Docker + Mysql
 
  - Java 8
  - Mysql 5.7.21
