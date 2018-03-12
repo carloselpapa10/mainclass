@@ -4,7 +4,7 @@ pipeline {
         stage('Example 1') {
             steps {
                 echo 'Hello, docker'
-		
+		sh 'mvn test'
             }
         }
     }
