@@ -7,11 +7,8 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 	
-  <!--<modules>
-	  <module>admin</module>
-	  <module>test-producer</module>
-	  <module>zuul-gateway</module>
-	  <module>test-consumer</module>
-  </modules>-->
+ <modules>
+	  <module>4. Testing /order-service/</module>
+  </modules>
 	
 </project>
