@@ -10,6 +10,7 @@ pipeline {
 	    } 
             steps {
                 echo 'Hello, docker'
+		sh 'docker ps'
             }
         }
     }
