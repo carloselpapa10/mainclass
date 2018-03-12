@@ -8,7 +8,7 @@ pipeline {
         stage('Example 1') {
             steps {
                 echo 'Hello, docker'
-		sh 'mvn -B -DskipTests clean package' 
+		echo ${WORKSPACE}
             }
         }
     }
