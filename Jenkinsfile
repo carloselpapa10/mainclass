@@ -3,9 +3,10 @@ pipeline {
     stages {	
         stage('Example 1') {
             agent { 
-		image 'maven:3-alpine'
-		label 'my-defined-label'
-		args  '-v /tmp:/tmp'
+		docker {
+		    image 'mysql:latest' 
+	    	    args '-p 3306:3306'
+		}
 	    } 
             steps {
                 echo 'Hello, docker'
