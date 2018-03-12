@@ -1,10 +1,13 @@
 pipeline {
-    agent { docker 'maven:3-alpine' }
+    agent { 
+	docker 'maven:3-alpine' 
+    	args '-v /root/.m2:/root/.m2'
+    }
     stages {	
         stage('Example 1') {
             steps {
                 echo 'Hello, docker'
-		sh 'mvn test'
+		sh 'mvn -B -DskipTests clean package' 
             }
         }
     }
