@@ -3,9 +3,9 @@ pipeline {
     stages {
 	
         stage('Example 1') {
-            agent { docker 'demo-mysql' } 
             steps {
-                echo 'Hello, Maven'
+                echo 'Hello, docker'
+		sh 'docker run hello-world' 
             }
         }
     }
