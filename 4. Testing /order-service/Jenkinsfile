@@ -4,13 +4,20 @@ pipeline {
             image 'maven:3-alpine'
         }
     }
-    stages {	
-        stage('Example 1') {
+    stages {
+	stage('Build') { 
             steps {
-                echo 'Hello, docker'
-		sh 'pwd'
+                sh 'mvn -B -DskipTests clean package' 
+            }
+        }
+        stage('Test') {
+            steps {
 		sh 'mvn test'
-		//sh 'mvn -f /4.\ Testing\ /order-service/ test '
+            }
+	    post {
+                always {
+                    junit 'target/surefire-reports/*.xml' 
+                }
             }
         }
     }
