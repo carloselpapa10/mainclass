@@ -6,8 +6,6 @@ pipeline {
 		docker {
 		    image 'mysql:latest' 
 	    	    args '-p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=orderdb -e MYSQL_USER=userdb -e MYSQL_PASSWORD=passdb'
-		}
-		docker {
 		    image 'maven:3-alpine' 
 		    args '-v /root/.m2:/root/.m2'
 		}
