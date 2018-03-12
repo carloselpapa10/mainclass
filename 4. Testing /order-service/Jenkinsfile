@@ -6,11 +6,7 @@ pipeline {
     }
     stages {
 	
-	stage('Docker Build'){
-	    steps {
-		sh 'mvn clean package docker:build'
-            }	   
-	}
+	
 	stage('Delivery'){
 	    steps {
 		sh './4. Testing/deliver.sh'
