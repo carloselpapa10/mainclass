@@ -8,7 +8,8 @@ pipeline {
         stage('Example 1') {
             steps {
                 echo 'Hello, docker'
-		sh 'mvn -f /4. Testing/order-service/ test '
+		sh 'pwd'
+		//sh 'mvn -f /4. Testing/order-service/ test '
             }
         }
     }
