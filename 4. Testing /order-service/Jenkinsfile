@@ -10,7 +10,7 @@ pipeline {
                 echo 'Hello, docker'
 		sh 'pwd'
 		//sh 'mvn test'
-		sh 'mvn -f 4.\ Testing\ /order-service/ test '
+		sh 'mvn -f /4.\ Testing\ /order-service/ test '
             }
         }
     }
