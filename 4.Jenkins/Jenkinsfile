@@ -7,7 +7,7 @@ pipeline {
 	stage('Docker Compose') {
 	      agent any
 	      steps {
-		sh 'docker-compose -f 4.Jenkins/docker-compose.yml up'
+		sh 'docker-compose --help'
 	      }
 	}
     }
