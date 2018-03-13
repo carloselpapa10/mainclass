@@ -43,3 +43,16 @@ Order Service contains REST services to add and list orders.
 ```sh
 http://localhost:5000/swagger-ui.html
 ```
+
+### Start/Stop Jenkins Blueocean
+```sh
+$ docker start jenkins_blueocean
+$ docker stop jenkins_blueocean
+```
+
+### Remove Jenkins Blueocean + Services
+```sh
+$ docker rm jenkins_blueocean
+$ docker rm mysql
+$ docker rm order-service-app
+```
