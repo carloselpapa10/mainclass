@@ -4,11 +4,23 @@ pipeline {
         maven 'maven-3' 
     }
     stages {
+	    stage('Test') {
+		    agent any
+		    steps {
+			    script {
+				    try {
+					  sh 'docker stop mysql'  
+					  sh 'docker rm mysql'
+				    }finally {
+					    echo 'error'
+				    }
+				    
+			    }
+		    }
+	    }
 	stage('Mysql Container') {
 	      agent any
 	      steps {
-		sh 'set -e docker stop mysql'
-		sh 'set -e docker rm mysql'
 		sh 'docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=orderdb -e MYSQL_USER=userdb -e MYSQL_PASSWORD=passdb mysql:latest'
 	      }
 	}
