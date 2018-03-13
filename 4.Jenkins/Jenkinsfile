@@ -4,12 +4,6 @@ pipeline {
         maven 'maven-3' 
     }
     stages {
-	stage('Maven Clean Package') {
-		agent any
-	     	steps {
-			sh 'mvn -f "4.Jenkins/order-service/pom.xml" -B -DskipTests clean package docker:build'
-	      	}
-	} 
 	stage('Docker Compose') {
 	      agent any
 	      steps {
