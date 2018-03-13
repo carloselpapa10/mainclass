@@ -9,8 +9,7 @@ pipeline {
 		    steps {
 			sh 'docker stop mysql'  
 			sh 'docker rm mysql'				    
-		    }
-		}
+		    }		
 	    }	    
 	stage('Mysql Container') {
 	      agent any
