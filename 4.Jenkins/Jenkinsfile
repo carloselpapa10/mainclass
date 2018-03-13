@@ -6,7 +6,7 @@ pipeline {
 			docker { image 'maven:3-alpine' }
 	      	}
 	     	steps {
-			sh 'mvn -B -DskipTests clean'
+			sh 'mvn -f "4.Jenkins/pom.xml" -B -DskipTests clean'
 	      	}
 	} 
     }
