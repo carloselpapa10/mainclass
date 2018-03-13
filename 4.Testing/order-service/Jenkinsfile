@@ -9,7 +9,7 @@ pipeline {
 	
 	stage('Delivery'){
 	    steps {
-		sh 'sudo Docker ps'
+		sh 'Docker ps'
             }	   
 	}
     }
