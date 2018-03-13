@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
 	
  <modules>
-	  <module>4. Testing /order-service/</module>
+	  <module>4.Testing/order-service/</module>
   </modules>
 	
 </project>
