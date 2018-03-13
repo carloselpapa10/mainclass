@@ -19,9 +19,5 @@ pipeline {
 	      }
 	}
     }
-post { 
-		failure { 
-		    echo 'Error controlled'
-		}
-	    }
+
 }
