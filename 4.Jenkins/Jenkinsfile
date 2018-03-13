@@ -6,8 +6,14 @@ pipeline {
 			docker { image 'maven:3-alpine' }
 	      	}
 	     	steps {
-			sh 'mvn -f "4.Jenkins/pom.xml" -B -DskipTests clean package docker:build'
+			sh 'mvn -f "4.Jenkins/order-service/pom.xml" -B -DskipTests clean package docker:build'
 	      	}
 	} 
+	stage('Docker Compose') {
+	      agent any
+	      steps {
+		sh 'docker-compose -f 4.Jenkins/docker-compose.yml up'
+	      }
+	}
     }
 }
