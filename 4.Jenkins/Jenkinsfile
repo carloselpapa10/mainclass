@@ -7,16 +7,15 @@ pipeline {
 	    stage('Test') {
 		    agent any
 		    steps {
-			    script {
-				    try {
-					  sh 'docker stop mysql'  
-					  sh 'docker rm mysql'
-				    }finally {
-					    echo 'error'
-				    }
-				    
-			    }
+			sh 'docker stop mysql'  
+			sh 'docker rm mysql'				    
 		    }
+		}
+	    }
+	    post { 
+		failure { 
+		    echo 'Error controlled'
+		}
 	    }
 	stage('Mysql Container') {
 	      agent any
