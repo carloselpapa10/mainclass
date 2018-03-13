@@ -11,12 +11,7 @@ pipeline {
 			sh 'docker rm mysql'				    
 		    }
 		}
-	    }
-	    post { 
-		failure { 
-		    echo 'Error controlled'
-		}
-	    }
+	    }	    
 	stage('Mysql Container') {
 	      agent any
 	      steps {
@@ -24,4 +19,9 @@ pipeline {
 	      }
 	}
     }
+post { 
+		failure { 
+		    echo 'Error controlled'
+		}
+	    }
 }
