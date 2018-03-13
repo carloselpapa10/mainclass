@@ -114,7 +114,7 @@
 	            <version>0.4.13</version>
 	            <configuration>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
@@ -123,12 +123,12 @@
                         </resource>
                         <resource>
 			                <targetPath>/</targetPath>
-			                <directory>${docker.baseDir}</directory>
+			                <directory>${project.basedir}/${docker.baseDir}</directory>
 			                <include>wait-for-mysql.sh</include>
 			            </resource>
 			            <resource>
 			                <targetPath>/</targetPath>
-			                <directory>${docker.baseDir}</directory>
+			                <directory>${project.basedir}/${docker.baseDir}</directory>
 			                <include>wait-for-it.sh</include>
 			            </resource>
                     </resources>
