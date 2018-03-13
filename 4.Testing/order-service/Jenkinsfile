@@ -9,7 +9,7 @@ pipeline {
 	
 	stage('Delivery'){
 	    steps {
-		sh 'Docker ps'
+		sh './4.Testing/delivery.sh'
             }	   
 	}
     }
