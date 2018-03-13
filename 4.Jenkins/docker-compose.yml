@@ -20,7 +20,6 @@ services:
       - mysql-service
     ports:
       - 5000:8090
-    restart: always
     environment:
       - DATABASE_HOST=mysql-service
       - DATABASE_USER=userdb
