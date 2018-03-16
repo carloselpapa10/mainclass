@@ -68,5 +68,20 @@ services:
       - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
       - CONFIG_SERVER_URI=http://config:8888
 
+  test-consumer-service:
+    build: ./test-consumer
+    container_name: test-consumer-service
+    volumes:
+      - ./build/libs:/app
+    ports:
+      - 5003:8091
+    depends_on:
+      - zuul-gateway
+    networks:
+      - "discovery"
+    environment:
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+      - CONFIG_SERVER_URI=http://config:8888
+
 networks:
   discovery:
