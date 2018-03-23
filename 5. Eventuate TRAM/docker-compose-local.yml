@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+
+  order-service:
+    image: carloselpapa10/order-service
+    container_name: order-service
+    ports:
+      - 5000:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://${DOCKER_HOST_IP}/eventuate
+      SPRING_DATASOURCE_USERNAME: mysqluser
+      SPRING_DATASOURCE_PASSWORD: mysqlpw
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.jdbc.Driver
+      EVENTUATELOCAL_KAFKA_BOOTSTRAP_SERVERS: ${DOCKER_HOST_IP}:9092
+      EVENTUATELOCAL_ZOOKEEPER_CONNECTION_STRING: ${DOCKER_HOST_IP}:2181
+
+  invoice-service:
+    image: carloselpapa10/invoice-service
+    container_name: invoice-service
+    ports:
+      - 5001:8090
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://${DOCKER_HOST_IP}/eventuate
+      SPRING_DATASOURCE_USERNAME: mysqluser
+      SPRING_DATASOURCE_PASSWORD: mysqlpw
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.jdbc.Driver
+      EVENTUATELOCAL_KAFKA_BOOTSTRAP_SERVERS: ${DOCKER_HOST_IP}:9092
+      EVENTUATELOCAL_ZOOKEEPER_CONNECTION_STRING: ${DOCKER_HOST_IP}:2181
+
+  mongodb:
+    image: mongo:3.0.15
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - 27017:27017

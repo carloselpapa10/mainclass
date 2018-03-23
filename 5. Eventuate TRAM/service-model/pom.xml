@@ -1,0 +1,157 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mainclass</groupId>
+  <artifactId>service-model</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>service-model</name>
+  
+  <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.0.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	
+	<repositories>
+        <repository>
+            <id>jcenter</id>
+            <url>http://jcenter.bintray.com</url>
+        </repository>
+	</repositories>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		
+		<eventuateTramSagasVersion>0.5.0.RELEASE</eventuateTramSagasVersion>
+		<eventuateTramVersion>0.6.0.RELEASE</eventuateTramVersion>
+		<eventuateClientVersion>0.20.1.RELEASE</eventuateClientVersion>
+		
+		<kotlinVersion>1.1.4-3</kotlinVersion>
+		<kotlin.compiler.incremental>true</kotlin.compiler.incremental>
+	</properties>
+	
+  	<dependencies>
+  		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
+		<dependency>
+		  <groupId>io.eventuate.tram.core</groupId>
+		  <artifactId>eventuate-tram-commands</artifactId>
+		  <version>${eventuateTramVersion}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.36</version>
+		</dependency>
+		
+		<!-- swagger -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.jetbrains.kotlin</groupId>
+		    <artifactId>kotlin-stdlib-jre8</artifactId>
+		    <version>${kotlinVersion}</version>
+		</dependency>
+				
+		<dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>1.16.18</version>
+		    <scope>provided</scope>
+		</dependency>
+				
+
+    </dependencies>
+  <build>
+  	<sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+    <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+        <plugins>        	
+             <plugin>
+	            <artifactId>kotlin-maven-plugin</artifactId>
+	            <groupId>org.jetbrains.kotlin</groupId>
+	            <version>${kotlin.version}</version>
+	            <executions>
+	                <execution>
+	                    <id>compile</id>
+	                    <goals> <goal>compile</goal> </goals>
+	                    <configuration>
+	                        <sourceDirs>
+	                            <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
+	                            <sourceDir>${project.basedir}/src/main/java</sourceDir>
+	                        </sourceDirs>
+	                    </configuration>
+	                </execution>
+	                <execution>
+	                    <id>test-compile</id>
+	                    <goals> <goal>test-compile</goal> </goals>
+	                    <configuration>
+	                        <sourceDirs>
+	                            <sourceDir>${project.basedir}/src/test/kotlin</sourceDir>
+	                            <sourceDir>${project.basedir}/src/test/java</sourceDir>
+	                        </sourceDirs>
+	                    </configuration>
+	                </execution>
+	            </executions>
+	        </plugin>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-compiler-plugin</artifactId>
+	            <version>3.5.1</version>
+	            <executions>
+	                <!-- Replacing default-compile as it is treated specially by maven -->
+	                <execution>
+	                    <id>default-compile</id>
+	                    <phase>none</phase>
+	                </execution>
+	                <!-- Replacing default-testCompile as it is treated specially by maven -->
+	                <execution>
+	                    <id>default-testCompile</id>
+	                    <phase>none</phase>
+	                </execution>
+	                <execution>
+	                    <id>java-compile</id>
+	                    <phase>compile</phase>
+	                    <goals> <goal>compile</goal> </goals>
+	                </execution>
+	                <execution>
+	                    <id>java-test-compile</id>
+	                    <phase>test-compile</phase>
+	                    <goals> <goal>testCompile</goal> </goals>
+	                </execution>
+	            </executions>
+	        </plugin>
+	        <plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-jar-plugin</artifactId>
+			    <version>2.6</version>
+			    <configuration>
+			        <archive>
+			            <manifest>
+			                <addClasspath>true</addClasspath>
+			                <mainClass>${main.class}</mainClass>
+			            </manifest>
+			        </archive>
+			    </configuration>
+			</plugin>
+        </plugins>
+</build>
+
+</project>
