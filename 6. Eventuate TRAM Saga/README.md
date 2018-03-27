@@ -10,10 +10,10 @@
 
 Order Service
 - Receive a ProductInfo object and CustomerId.
-- Create an order with order state completed = false 
+- Create an order with state completed like false 
 - Send a request to Customer Service to check if the customer exists. 
 - Send a request to Invoice Service to generate an invoice order.
-- If all the process is done successfully so it updates the order state to completed = true.
+- If all the process is done successfully so it updates the order state to completed like true.
 
 Customer Service
 - Receive an orderId and customerId
