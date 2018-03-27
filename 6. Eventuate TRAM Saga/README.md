@@ -9,7 +9,7 @@
 ### Sample Description
 
 Order Service
-- Receive an ProductInfo object and CustomerId.
+- Receive a ProductInfo object and CustomerId.
 - Create an order with order state completed = false 
 - Send a request to Customer Service to check if the customer exists. 
 - Send a request to Invoice Service to generate an invoice order.
