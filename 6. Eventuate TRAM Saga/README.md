@@ -43,7 +43,7 @@ $ public CreateOrderSaga(OrderServiceProxy orderService, CustomerServiceProxy cu
 				.build();
 ```
 ### Before everything
->Important: You must add setting.xml to your .m2 folder.
+>Important: You must add the Evntuate JCenter Repository into your maven folder. To do that execute the following command.
 ```sh
 $ sudo cp -a setting.xml ~/.m2
 ```
