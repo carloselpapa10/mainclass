@@ -4,9 +4,14 @@ services:
 
   order-service:
     image: carloselpapa10/order-service
-    container_name: order-service
+    container_name: orderservice
     ports:
       - 5000:8080
+    links:
+      - mysql
+      - kafka
+      - zookeeper
+      - cdcservice
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql/eventuate
       SPRING_DATASOURCE_USERNAME: mysqluser
@@ -17,9 +22,14 @@ services:
 
   invoice-service:
     image: carloselpapa10/invoice-service
-    container_name: invoice-service
+    container_name: invoiceservice
     ports:
       - 5001:8090
+    links:
+      - mysql
+      - kafka
+      - zookeeper
+      - cdcservice
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql/eventuate
       SPRING_DATASOURCE_USERNAME: mysqluser
@@ -34,7 +44,6 @@ services:
       - 2181:2181
       - 2888:2888
       - 3888:3888
-
 
   kafka:
     image: eventuateio/eventuateio-local-kafka:0.14.0

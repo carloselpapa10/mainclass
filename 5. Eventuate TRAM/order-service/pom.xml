@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.main.class</groupId>
+  <groupId>com.mainclass</groupId>
   <artifactId>order-service</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-	<name>order</name>
+	<name>order-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -24,10 +24,8 @@
 		<eventuateTramVersion>0.6.0.RELEASE</eventuateTramVersion>
 		<eventuateClientVersion>0.20.1.RELEASE</eventuateClientVersion>
 		<eventuateLocalVersion>0.17.0.RELEASE</eventuateLocalVersion>
-		
-		<kotlinVersion>1.1.4-3</kotlinVersion>
-		
-		<start-class>org.eventuate.saga.orderservice.OrderServiceApplication</start-class>
+				
+		<start-class>com.mainclass.orderservice.OrderServiceApplication</start-class>
 		<docker.image.prefix>carloselpapa10</docker.image.prefix>
 		<docker.baseDir>src/main/docker</docker.baseDir>
 	</properties>
@@ -38,7 +36,7 @@
             <url>http://jcenter.bintray.com</url>
         </repository>
 	</repositories>
-
+	
 	<dependencies>
 	
 		<dependency>
@@ -46,13 +44,24 @@
 		  <artifactId>service-model</artifactId>
 		  <version>0.0.1-SNAPSHOT</version>
 		</dependency>
-			
+		
+		<dependency>
+		  <groupId>io.eventuate.tram.core</groupId>
+		  <artifactId>eventuate-tram-events</artifactId>
+		  <version>${eventuateTramVersion}</version>
+		</dependency>
+		
 		<dependency>
 		  <groupId>io.eventuate.tram.sagas</groupId>
 		  <artifactId>eventuate-jpa-sagas-framework</artifactId>
 		  <version>${eventuateTramSagasVersion}</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+				
 		<dependency>
 		  <groupId>io.eventuate.tram.sagas</groupId>
 		  <artifactId>eventuate-tram-sagas-simple-dsl</artifactId>
@@ -71,29 +80,14 @@
 		    <version>${eventuateClientVersion}</version>
 		</dependency>
 		
-		<!--  
-		eventuate saas
 		<dependency>
-		    <groupId>io.eventuate.client.java</groupId>
-		    <artifactId>eventuate-client-java-http-stomp-spring</artifactId>
-		    <version>${eventuateClientVersion}</version>
-		</dependency>		
-		 -->
-		<dependency>
-		  <groupId>io.eventuate.local.java</groupId>
-		  <artifactId>eventuate-local-java-jdbc</artifactId>
-		  <version>${eventuateLocalVersion}</version>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>1.16.18</version>
+		    <scope>provided</scope>
 		</dependency>
-		 
-		<!-- 
 		
-		<dependency>
-		  <groupId>io.eventuate.local.java</groupId>
-		  <artifactId>eventuate-local-java-embedded-cdc-autoconfigure</artifactId>
-		  <version>${eventuateLocalVersion}</version>
-		</dependency>
-		 -->
-		 
+		<!-- spring boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -115,28 +109,10 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<dependency>
-		    <groupId>org.projectlombok</groupId>
-		    <artifactId>lombok</artifactId>
-		    <version>1.16.18</version>
-		    <scope>provided</scope>
-		</dependency>
-				
-		<dependency>
-		    <groupId>org.jetbrains.kotlin</groupId>
-		    <artifactId>kotlin-stdlib-jre8</artifactId>
-		    <version>${kotlinVersion}</version>
-		</dependency>
 		
-		<dependency>
-		    <groupId>org.jetbrains.kotlin</groupId>
-		    <artifactId>kotlin-reflect</artifactId>
-		    <version>1.2.21</version>
-		</dependency>
-				
 		
 	</dependencies>
-
+	
 	<build>
 		<finalName>order-service</finalName>
 		<plugins>
@@ -171,6 +147,7 @@
                     </resources>
 				</configuration>
 	        </plugin>
+	        
 		</plugins>
 	</build>
 </project>

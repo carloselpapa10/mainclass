@@ -1,0 +1,5 @@
+com/mainclass/servicemodel/coreapi/order/InvoiceCreationFailedEvent.class
+com/mainclass/servicemodel/coreapi/order/OrderCreatedEvent.class
+com/mainclass/servicemodel/common/Constants.class
+com/mainclass/servicemodel/coreapi/order/ProductInfo.class
+com/mainclass/servicemodel/coreapi/order/InvoiceCreatedEvent.class
