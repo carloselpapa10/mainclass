@@ -57,6 +57,7 @@ $ mvn -f customer-service/pom.xml docker:build
 $ mvn -f invoice-service/pom.xml docker:build
 $ mvn -f order-service/pom.xml docker:build
 $ mvn -f order-view-service/ docker:build
+```
 
 Main folder - Running
 ```sh
