@@ -9,3 +9,12 @@ docker run -d \
     -e EVENTUATELOCAL_ZOOKEEPER_CONNECTION_STRING=${DOCKER_HOST_IP}:2181  \
     -e MONGODB=${DOCKER_HOST_IP}:27017/orderdb \
     carloselpapa10/order-service
+
+mvn clean package
+
+mvn -f customer-service/pom.xml docker:build
+mvn -f invoice-service/pom.xml docker:build
+mvn -f order-service/pom.xml docker:build
+mvn -f order-view-service/ docker:build
+
+docker-compose up
