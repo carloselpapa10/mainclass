@@ -1,4 +1,4 @@
-package com.mainclass.orderservice.service;
+package com.mainclass.orderservice.commandhandlers;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,16 +10,15 @@ import io.eventuate.tram.sagas.participant.SagaParticipantConfiguration;
 
 @Configuration
 @Import({ SagaParticipantConfiguration.class, TramEventsPublisherConfiguration.class })
-public class OrderCommandHandlersConfiguration {
+public class OrderServiceCommandHandlersConfiguration {
 
 	@Bean
-	public OrderCommandHandlers orderCommandHandlers() {
-		return new OrderCommandHandlers();
+	public OrderServiceCommandHandlers orderCommandHandlers() {
+		return new OrderServiceCommandHandlers();
 	}
-
+	
 	@Bean
-	public SagaCommandDispatcher orderCommandHandlersDispatcher(OrderCommandHandlers orderCommandHandlers) {
-		return new SagaCommandDispatcher("orderService", orderCommandHandlers.commandHandlers());
+	public SagaCommandDispatcher orderServiceCommandHandlersDispatcher(OrderServiceCommandHandlers orderServiceCommandHandlers) {
+		return new SagaCommandDispatcher("orderService", orderServiceCommandHandlers.commandHandlers());
 	}
-
 }

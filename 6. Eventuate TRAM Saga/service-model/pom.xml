@@ -27,6 +27,13 @@
 	</properties>
 	
 	<dependencies>
+	
+		<!-- used by everyone -->
+		<dependency>
+		  <groupId>com.mainclass</groupId>
+		  <artifactId>eventuate-tram-aggregate-domain-events</artifactId>
+		  <version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		
 		<dependency>
 		  <groupId>io.eventuate.tram.core</groupId>

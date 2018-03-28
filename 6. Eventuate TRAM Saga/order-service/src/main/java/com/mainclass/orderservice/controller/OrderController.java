@@ -14,9 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mainclass.orderservice.model.Order;
-import com.mainclass.orderservice.model.OrderDomainEventPublisher;
 import com.mainclass.orderservice.service.OrderService;
-import com.mainclass.servicemodel.order.api.web.CreateOrderRequest;
+import com.mainclass.orderservice.webapi.CreateOrderRequest;
 
 @RestController
 @RequestMapping(path = "/orders")

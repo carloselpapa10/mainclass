@@ -1,4 +1,4 @@
-package com.mainclass.servicemodel.invoice.command;
+package com.mainclass.servicemodel.invoice.api.command;
 
 import io.eventuate.tram.commands.common.Command;
 

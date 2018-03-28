@@ -9,7 +9,6 @@ import io.eventuate.tram.events.aggregates.ResultWithDomainEvents;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 import static java.util.Collections.singletonList;
 

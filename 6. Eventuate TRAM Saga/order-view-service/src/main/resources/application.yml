@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 8086
 
 spring:
   datasource:
@@ -12,21 +12,8 @@ spring:
     generate-ddl: true 
   data:
     mongodb:
-      uri: ${MONGO_URL:mongodb://localhost:27017/invoicedb}
-
-logging:
-  level:
-    org:
-      springframework:
-        orm:
-          jpa:INFO
-          
-      hibernate:
-        SQL:DEBUG
-    io:
-      eventuate:DEBUG
- 
- 
+      uri: ${MONGO_URL:mongodb://localhost:27017/ordersystemdb}
+            
 eventuatelocal:
   kafka:
     bootstrap:

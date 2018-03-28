@@ -12,7 +12,7 @@ spring:
     generate-ddl: true 
   data:
     mongodb:
-      uri: ${MONGO_URL:mongodb://localhost:27017/local}
+      uri: ${MONGO_URL:mongodb://localhost:27017/customerdb}
 
 logging:
   level:
@@ -52,7 +52,7 @@ spring:
     generate-ddl: true
   data:
     mongodb:
-      uri: ${MONGO_URL:mongodb://mongodb:27017/local}
+      uri: ${MONGO_URL:mongodb://${MONGODB}}
     
 eventuatelocal:
   kafka:

@@ -12,7 +12,8 @@
 	  <module>eventuate-tram-aggregate-domain-events</module>
 	  <module>customer-service</module>
           <module>invoice-service</module>
-	  <module>order-service</module>	  
+	  <module>order-service</module>
+	  <module>order-view-service</module>	  
   </modules>
 	
 </project>

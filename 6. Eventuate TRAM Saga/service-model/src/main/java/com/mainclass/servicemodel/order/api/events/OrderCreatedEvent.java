@@ -44,5 +44,13 @@ public class OrderCreatedEvent implements OrderDomainEvent{
 	public void setProductInfo(ProductInfo productInfo) {
 		this.productInfo = productInfo;
 	}
+
+	public String getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
 	
 }

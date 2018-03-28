@@ -11,9 +11,9 @@ import com.mainclass.orderservice.proxy.InvoiceServiceProxy;
 import com.mainclass.orderservice.proxy.OrderServiceProxy;
 import com.mainclass.orderservice.service.OrderService;
 import com.mainclass.servicemodel.customer.api.command.ValidateOrderByCustomer;
+import com.mainclass.servicemodel.invoice.api.command.CompensateInvoiceCommand;
+import com.mainclass.servicemodel.invoice.api.command.RequestInvoiceCommand;
 import com.mainclass.servicemodel.invoice.api.info.InvoiceInfo;
-import com.mainclass.servicemodel.invoice.command.CompensateInvoiceCommand;
-import com.mainclass.servicemodel.invoice.command.RequestInvoiceCommand;
 
 import io.eventuate.tram.sagas.orchestration.SagaDefinition;
 import io.eventuate.tram.sagas.simpledsl.SimpleSaga;

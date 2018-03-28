@@ -1,4 +1,4 @@
-package com.mainclass.servicemodel.order.api.web;
+package com.mainclass.orderservice.webapi;
 
 public class CreateOrderResponse {
 
@@ -17,6 +17,4 @@ public class CreateOrderResponse {
 	public void setOrderId(String orderId) {
 		this.orderId = orderId;
 	}
-	
-	
 }

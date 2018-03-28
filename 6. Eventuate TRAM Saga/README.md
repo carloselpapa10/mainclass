@@ -56,14 +56,17 @@ $ mvn clean package
 ```
 invoice-service folder
 ```sh
+$ cd invoice-service/
 $ mvn docker:build
 ```
 order-service folder
 ```sh
+$ cd order-service/
 $ mvn docker:build
 ```
 customer-service folder
 ```sh
+$ cd customer-service/
 $ mvn docker:build
 ```
 Main folder

@@ -1,5 +1,10 @@
-package com.mainclass.orderservice.service;
+package com.mainclass.orderservice.commandhandlers;
 
+import static io.eventuate.tram.commands.consumer.CommandHandlerReplyBuilder.withFailure;
+import static io.eventuate.tram.commands.consumer.CommandHandlerReplyBuilder.withSuccess;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.mainclass.orderservice.command.CompleteOrderCommand;
@@ -7,20 +12,17 @@ import com.mainclass.orderservice.command.RejectOrderCommand;
 import com.mainclass.orderservice.model.Order;
 import com.mainclass.orderservice.model.OrderRepository;
 import com.mainclass.orderservice.saga.createorder.CreateOrderSaga;
+import com.mainclass.orderservice.service.OrderService;
 import com.mainclass.servicemodel.common.Constants;
 
 import io.eventuate.tram.commands.consumer.CommandHandlers;
 import io.eventuate.tram.commands.consumer.CommandMessage;
 import io.eventuate.tram.messaging.common.Message;
 import io.eventuate.tram.sagas.participant.SagaCommandHandlersBuilder;
-import static io.eventuate.tram.commands.consumer.CommandHandlerReplyBuilder.withFailure;
-import static io.eventuate.tram.commands.consumer.CommandHandlerReplyBuilder.withSuccess;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-public class OrderCommandHandlers {
+public class OrderServiceCommandHandlers {
 
-	private static final Logger log = LoggerFactory.getLogger(CreateOrderSaga.class);
+private static final Logger log = LoggerFactory.getLogger(CreateOrderSaga.class);
 	
 	@Autowired
 	private OrderService orderService;
@@ -68,5 +70,4 @@ public class OrderCommandHandlers {
 		orderRepository.save(order);
 		return withSuccess();
 	}
-	
 }

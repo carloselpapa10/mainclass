@@ -23,6 +23,11 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		
+		<eventuateTramSagasVersion>0.5.0.RELEASE</eventuateTramSagasVersion>
+		<eventuateTramVersion>0.6.0.RELEASE</eventuateTramVersion>
+		<eventuateClientVersion>0.20.1.RELEASE</eventuateClientVersion>
+		<eventuateLocalVersion>0.17.0.RELEASE</eventuateLocalVersion>
+		
 		<start-class>com.mainclass.orderviewservice.OrderViewServiceApplication</start-class>
 		<docker.image.prefix>carloselpapa10</docker.image.prefix>
 		<docker.baseDir>src/main/docker</docker.baseDir>
@@ -43,10 +48,30 @@
 		  <version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		
+		<!-- eventuate -->
+		<dependency>
+		  <groupId>io.eventuate.tram.core</groupId>
+		  <artifactId>eventuate-tram-jdbc-kafka</artifactId>
+		  <version>${eventuateTramVersion}</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>io.eventuate.tram.core</groupId>
+		  <artifactId>eventuate-tram-events</artifactId>
+		  <version>${eventuateTramVersion}</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>io.eventuate.tram.sagas</groupId>
+		  <artifactId>eventuate-tram-sagas-simple-dsl</artifactId>
+		  <version>${eventuateTramSagasVersion}</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
+		 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

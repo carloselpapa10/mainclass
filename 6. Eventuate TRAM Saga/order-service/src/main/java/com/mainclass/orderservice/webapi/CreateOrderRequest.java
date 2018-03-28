@@ -1,4 +1,4 @@
-package com.mainclass.servicemodel.order.api.web;
+package com.mainclass.orderservice.webapi;
 
 import com.mainclass.servicemodel.order.api.events.ProductInfo;
 

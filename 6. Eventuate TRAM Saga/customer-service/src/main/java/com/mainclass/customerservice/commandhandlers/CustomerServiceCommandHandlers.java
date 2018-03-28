@@ -1,6 +1,7 @@
-package com.mainclass.customerservice.service;
+package com.mainclass.customerservice.commandhandlers;
 
 import com.mainclass.customerservice.model.Customer;
+import com.mainclass.customerservice.service.CustomerService;
 import com.mainclass.servicemodel.common.Constants;
 import com.mainclass.servicemodel.customer.api.command.ValidateOrderByCustomer;
 
@@ -18,7 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class CustomerServiceCommandHandlers {
 
-	private static final Logger log = LoggerFactory.getLogger(CustomerServiceCommandHandlers.class);
+private static final Logger log = LoggerFactory.getLogger(CustomerServiceCommandHandlers.class);
 	
 	@Autowired
 	private CustomerService customerService;
