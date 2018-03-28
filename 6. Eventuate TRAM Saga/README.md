@@ -50,26 +50,15 @@ $ sudo cp -a setting.xml ~/.m2
 
 ### Building and Running
 
-Main folder
+Main folder - Building
 ```sh
 $ mvn clean package
-```
-invoice-service folder
-```sh
-$ cd invoice-service/
-$ mvn docker:build
-```
-order-service folder
-```sh
-$ cd order-service/
-$ mvn docker:build
-```
-customer-service folder
-```sh
-$ cd customer-service/
-$ mvn docker:build
-```
-Main folder
+$ mvn -f customer-service/pom.xml docker:build
+$ mvn -f invoice-service/pom.xml docker:build
+$ mvn -f order-service/pom.xml docker:build
+$ mvn -f order-view-service/ docker:build
+
+Main folder - Running
 ```sh
 $ docker-compose up
 ```
@@ -85,4 +74,8 @@ http://localhost:5000/swagger-ui.html
 Invoice Service. (Search your order invoices)
 ```sh
 http://localhost:5002/swagger-ui.html
+```
+Order View Service. (Search everything)
+```sh
+http://localhost:5003/swagger-ui.html
 ```
