@@ -1,4 +1,4 @@
-package com.mainclass.orderservice.command;
+package com.mainclass.servicemodel.order.api.command;
 
 public class RejectOrderCommand extends OrderCommand{
 

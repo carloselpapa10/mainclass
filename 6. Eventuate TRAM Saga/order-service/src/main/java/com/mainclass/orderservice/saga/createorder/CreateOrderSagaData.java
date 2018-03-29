@@ -1,6 +1,6 @@
 package com.mainclass.orderservice.saga.createorder;
 
-import com.mainclass.servicemodel.order.api.events.ProductInfo;
+import com.mainclass.servicemodel.order.api.info.ProductInfo;
 
 public class CreateOrderSagaData {
 

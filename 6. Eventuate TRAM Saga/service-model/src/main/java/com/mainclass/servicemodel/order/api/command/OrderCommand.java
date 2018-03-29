@@ -1,4 +1,4 @@
-package com.mainclass.orderservice.command;
+package com.mainclass.servicemodel.order.api.command;
 
 import io.eventuate.tram.commands.common.Command;
 
@@ -20,5 +20,4 @@ public class OrderCommand implements Command{
 	public void setOrderId(String orderId) {
 		this.orderId = orderId;
 	}
-	
 }

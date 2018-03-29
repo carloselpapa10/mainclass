@@ -5,7 +5,7 @@ import javax.persistence.GenerationType;
 
 import org.springframework.data.annotation.Id;
 
-import com.mainclass.servicemodel.order.api.events.ProductInfo;
+import com.mainclass.servicemodel.order.api.info.ProductInfo;
 
 import lombok.ToString;
 

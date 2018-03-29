@@ -2,9 +2,9 @@ package com.mainclass.orderservice.proxy;
 
 import org.springframework.stereotype.Component;
 
-import com.mainclass.orderservice.command.CompleteOrderCommand;
-import com.mainclass.orderservice.command.RejectOrderCommand;
 import com.mainclass.servicemodel.common.Constants;
+import com.mainclass.servicemodel.order.api.command.CompleteOrderCommand;
+import com.mainclass.servicemodel.order.api.command.RejectOrderCommand;
 
 import io.eventuate.tram.commands.common.Success;
 import io.eventuate.tram.sagas.simpledsl.CommandEndpoint;

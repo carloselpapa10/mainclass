@@ -6,14 +6,13 @@ import static io.eventuate.tram.commands.consumer.CommandHandlerReplyBuilder.wit
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import com.mainclass.orderservice.command.CompleteOrderCommand;
-import com.mainclass.orderservice.command.RejectOrderCommand;
 import com.mainclass.orderservice.model.Order;
 import com.mainclass.orderservice.model.OrderRepository;
 import com.mainclass.orderservice.saga.createorder.CreateOrderSaga;
 import com.mainclass.orderservice.service.OrderService;
 import com.mainclass.servicemodel.common.Constants;
+import com.mainclass.servicemodel.order.api.command.CompleteOrderCommand;
+import com.mainclass.servicemodel.order.api.command.RejectOrderCommand;
 
 import io.eventuate.tram.commands.consumer.CommandHandlers;
 import io.eventuate.tram.commands.consumer.CommandMessage;

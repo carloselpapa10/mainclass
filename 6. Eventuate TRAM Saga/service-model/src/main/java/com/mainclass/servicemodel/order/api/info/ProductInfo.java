@@ -1,8 +1,5 @@
-package com.mainclass.servicemodel.order.api.events;
+package com.mainclass.servicemodel.order.api.info;
 
-import lombok.ToString;
-
-@ToString
 public class ProductInfo {
 
 	private String productId;
@@ -36,5 +33,4 @@ public class ProductInfo {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
-	
 }

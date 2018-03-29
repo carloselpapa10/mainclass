@@ -21,7 +21,7 @@ import com.mainclass.orderservice.model.OrderRepository;
 import com.mainclass.orderservice.saga.createorder.CreateOrderSagaData;
 import com.mainclass.servicemodel.order.api.events.OrderCreatedEvent;
 import com.mainclass.servicemodel.order.api.events.OrderDomainEvent;
-import com.mainclass.servicemodel.order.api.events.ProductInfo;
+import com.mainclass.servicemodel.order.api.info.ProductInfo;
 
 @Component
 @Transactional

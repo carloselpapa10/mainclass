@@ -1,6 +1,6 @@
 package com.mainclass.servicemodel.invoice.api.command;
 
-import com.mainclass.servicemodel.order.api.events.ProductInfo;
+import com.mainclass.servicemodel.order.api.info.ProductInfo;
 
 import io.eventuate.tram.commands.common.Command;
 

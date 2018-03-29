@@ -1,9 +1,6 @@
 package com.mainclass.orderservice.saga.createorder;
 
 import org.springframework.stereotype.Component;
-
-import com.mainclass.orderservice.command.CompleteOrderCommand;
-import com.mainclass.orderservice.command.RejectOrderCommand;
 import com.mainclass.orderservice.model.Order;
 import com.mainclass.orderservice.model.OrderRepository;
 import com.mainclass.orderservice.proxy.CustomerServiceProxy;
@@ -14,6 +11,8 @@ import com.mainclass.servicemodel.customer.api.command.ValidateOrderByCustomer;
 import com.mainclass.servicemodel.invoice.api.command.CompensateInvoiceCommand;
 import com.mainclass.servicemodel.invoice.api.command.RequestInvoiceCommand;
 import com.mainclass.servicemodel.invoice.api.info.InvoiceInfo;
+import com.mainclass.servicemodel.order.api.command.CompleteOrderCommand;
+import com.mainclass.servicemodel.order.api.command.RejectOrderCommand;
 
 import io.eventuate.tram.sagas.orchestration.SagaDefinition;
 import io.eventuate.tram.sagas.simpledsl.SimpleSaga;

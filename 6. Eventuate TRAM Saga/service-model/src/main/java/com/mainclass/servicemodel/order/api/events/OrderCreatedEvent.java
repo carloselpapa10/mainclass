@@ -1,5 +1,7 @@
 package com.mainclass.servicemodel.order.api.events;
 
+import com.mainclass.servicemodel.order.api.info.ProductInfo;
+
 public class OrderCreatedEvent implements OrderDomainEvent{
 
 	private String orderId;

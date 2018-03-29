@@ -5,8 +5,7 @@ import org.springframework.stereotype.Component;
 
 import com.mainclass.invoiceservice.model.Invoice;
 import com.mainclass.invoiceservice.model.InvoiceRepository;
-import com.mainclass.servicemodel.order.api.events.ProductInfo;
-
+import com.mainclass.servicemodel.order.api.info.ProductInfo;
 
 import org.springframework.transaction.annotation.Transactional;
 
