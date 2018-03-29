@@ -1,19 +1,17 @@
 package com.mainclass.servicemodel.invoice.api.events;
 
-import io.eventuate.tram.events.common.DomainEvent;
-
-public class InvoiceCreatedEvent implements DomainEvent{
+public class InvoiceCreatedEvent implements InvoiceDomainEvent{
 
 	private String orderId;
-	private String invoiceId;
-
+	private String invoiceComment;
+	
 	public InvoiceCreatedEvent() {
 	}
-	
-	public InvoiceCreatedEvent(String orderId, String invoiceId) {
+
+	public InvoiceCreatedEvent(String orderId, String invoiceComment) {
 		super();
 		this.orderId = orderId;
-		this.invoiceId = invoiceId;
+		this.invoiceComment = invoiceComment;
 	}
 
 	public String getOrderId() {
@@ -24,12 +22,12 @@ public class InvoiceCreatedEvent implements DomainEvent{
 		this.orderId = orderId;
 	}
 
-	public String getInvoiceId() {
-		return invoiceId;
+	public String getInvoiceComment() {
+		return invoiceComment;
 	}
 
-	public void setInvoiceId(String invoiceId) {
-		this.invoiceId = invoiceId;
+	public void setInvoiceComment(String invoiceComment) {
+		this.invoiceComment = invoiceComment;
 	}
-	
+		
 }

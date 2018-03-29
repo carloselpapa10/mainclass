@@ -35,6 +35,15 @@ public class Order {
 		this.customerId = customerId;
 	}
     
+        
+	public Order(String id, ProductInfo productInfo, String invoiceId, String customerId) {
+		super();
+		this.id = id;
+		this.productInfo = productInfo;
+		this.invoiceId = invoiceId;
+		this.customerId = customerId;
+	}
+
 	public Order(String id) {
 		super();
 		this.id = id;

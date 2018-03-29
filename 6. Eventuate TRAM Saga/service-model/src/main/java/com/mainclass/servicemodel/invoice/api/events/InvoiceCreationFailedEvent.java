@@ -1,8 +1,7 @@
 package com.mainclass.servicemodel.invoice.api.events;
 
-import io.eventuate.tram.events.common.DomainEvent;
 
-public class InvoiceCreationFailedEvent implements DomainEvent{
+public class InvoiceCreationFailedEvent implements InvoiceDomainEvent{
 
 	private String orderId;
 

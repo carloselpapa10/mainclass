@@ -18,4 +18,9 @@ public class EventHandlersConfiguration {
 	public DomainEventDispatcher customerHistoryDomainEventDispatcher(CustomerHistoryEventHandlers customerHistoryEventHandlers, MessageConsumer messageConsumer) {
 		return new DomainEventDispatcher("customerHistoryDomainEventDispatcher", customerHistoryEventHandlers.domainEventHandlers(), messageConsumer);
 	}
+	
+	@Bean
+	public DomainEventDispatcher invoiceHistoryDomainEventDispatcher(InvoiceHistoryEventHandlers invoiceHistoryEventHandlers, MessageConsumer messageConsumer ) {
+		return new DomainEventDispatcher("invoiceHistoryDomainEventDispatcher", invoiceHistoryEventHandlers.domainEventHandlers(), messageConsumer);
+	}
 }

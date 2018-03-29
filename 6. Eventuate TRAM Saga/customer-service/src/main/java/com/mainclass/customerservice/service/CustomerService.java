@@ -8,18 +8,21 @@ import com.mainclass.customerservice.model.Customer;
 import com.mainclass.customerservice.model.CustomerDomainEventPublisher;
 import com.mainclass.customerservice.model.CustomerRepository;
 import com.mainclass.servicemodel.customer.api.events.CustomerCreatedEvent;
-import com.mainclass.servicemodel.customer.api.events.CustomerDeletedAllEvent;
 import com.mainclass.servicemodel.customer.api.events.CustomerDeletedEvent;
 import com.mainclass.servicemodel.customer.api.events.CustomerDomainEvent;
 import com.mainclass.servicemodel.customer.api.events.CustomerUpdatedEvent;
 
 import io.eventuate.tram.events.aggregates.ResultWithDomainEvents;
 import static java.util.Collections.singletonList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 @Component
 public class CustomerService {
 
+	private static final Logger log = LoggerFactory.getLogger(CustomerService.class);
+	
 	@Autowired
 	private CustomerRepository customerRepository;
 	
@@ -27,6 +30,7 @@ public class CustomerService {
 	private CustomerDomainEventPublisher customerAggregateEventPublisher;
 	
 	public Customer createCustomer(String id, String name) {
+		log.info("createCustomer - CustomerService");
 		
 		List<CustomerDomainEvent> events = singletonList(new CustomerCreatedEvent(id, name));
 		ResultWithDomainEvents<Customer,CustomerDomainEvent> customerANdEvents = new ResultWithDomainEvents<>(new Customer(id, name),events);
@@ -37,6 +41,7 @@ public class CustomerService {
 	}
 	
 	public Customer findCustomer(String customerId) {		
+		log.info("findCustomer - CustomerService");
 		try {
 			Customer customer = customerRepository.findById(customerId).get();
 			return customer;
@@ -46,10 +51,12 @@ public class CustomerService {
 	}
 	
 	public List<Customer> findAll(){
+		log.info("findAll - CustomerService");
 		return customerRepository.findAll();
 	}
 	
 	public Customer updateCustomer(String id, String name) {
+		log.info("updateCustomer - CustomerService");
 		Customer customer = findCustomer(id);
 		if(customer!=null) {
 			
@@ -66,6 +73,7 @@ public class CustomerService {
 	}
 	
 	public void deleteCustomer(String id) {
+		log.info("deleteCustomer - CustomerService");
 		Customer customer = findCustomer(id);
 		if(customer!=null) {
 			
