@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: order-service
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: charlis
+Implementation-Vendor-Id: com.mainclass
+Build-Jdk: 1.8.0_151
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/order-service
+Created-By: Maven Integration for Eclipse
+Main-Class: com.mainclass.orderservice.OrderServiceApplication
+

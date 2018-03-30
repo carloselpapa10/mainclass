@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: eventuate-tram-aggregate-domain-events
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: charlis
+Implementation-Vendor-Id: com.mainclass
+Build-Jdk: 1.8.0_151
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/eventuate-tram-aggregate-domain-events
+Created-By: Maven Integration for Eclipse
+
