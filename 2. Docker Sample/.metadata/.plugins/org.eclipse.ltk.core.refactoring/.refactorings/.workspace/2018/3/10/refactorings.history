@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;eureka-server&apos;" deleteContents="false" description="Delete resource &apos;eureka-server&apos;" element1="/eureka-server" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1520274819972"/>&#x0A;<refactoring comment="Delete resource &apos;copyfiles-consumer&apos;" deleteContents="false" description="Delete resource &apos;copyfiles-consumer&apos;" element1="/copyfiles-consumer" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1520282963656"/>
-</session>

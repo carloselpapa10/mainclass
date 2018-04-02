@@ -1,3 +1,0 @@
-server.port=8070
-eureka.client.serviceUrl.defaultZone=http://admin-service/eureka
-#eureka.client.serviceUrl.defaultZone=http://localhost:8090/eureka

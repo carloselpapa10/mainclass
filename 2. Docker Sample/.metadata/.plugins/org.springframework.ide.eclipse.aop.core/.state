@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<aop-reference-model>
-<aop-project name="test-producer"/>
-<aop-project name="admin"/>
-<aop-project name="zuul-gateway"/>
-<aop-project name="test-consumer"/>
-</aop-reference-model>

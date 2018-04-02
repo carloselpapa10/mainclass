@@ -1,7 +1,0 @@
-server.port=8091
-
-#docker
-#eureka.client.serviceUrl.defaultZone=http://eureka-service:8761/eureka
-
-#local
-eureka.client.serviceUrl.defaultZone=http://localhost:8090/eureka
