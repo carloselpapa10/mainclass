@@ -1,0 +1,39 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata: 
+  name: order-service-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: order-service
+    spec:
+      containers:
+      - name: order-service
+        image: carloselpapa10/order-service
+        ports:
+        - name: order-svc-port
+          containerPort: 8090
+        env:
+          - name: DATABASE_HOST
+            value: database-service
+          - name: DATABASE_USER
+            valueFrom:
+              secretKeyRef:
+                name: application-secrets
+                key: username
+          - name: DATABASE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: application-secrets
+                key: password
+          - name: DATABASE_NAME
+            valueFrom:
+              secretKeyRef:
+                name: application-secrets
+                key: database
+          - name: DATABASE_DRIVER
+            value: com.mysql.jdbc.Driver
+
+  
