@@ -6,7 +6,6 @@ Prerequistes
 - Java 8
 - Docker
 - Maven
-- MongoDB
 
 ### Description
 
