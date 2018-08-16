@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  customer-service:
+    build: ./customer-service
+    container_name: customer-service
+    ports:
+      - 5000:8080
+    depends_on:
+      - mongodb
+    environment:
+      MONGODB: mongodb:27017/customerdb
+
+  mongodb:
+    image: mongo:3.0.15
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    ports:
+      - 27017:27017
