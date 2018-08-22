@@ -1,4 +1,4 @@
-# mainclass
+# MainClass{}
 ## Eventuate TRAM - SAGA Sample
 
 - Java 8
@@ -79,3 +79,7 @@ Order View Service. (Search everything)
 ```sh
 http://localhost:5003/swagger-ui.html
 ```
+
+MSc Carlos Avendaño
+
+https://www.linkedin.com/in/carlos-alberto-avenda%C3%B1o-arango-534b0a137/

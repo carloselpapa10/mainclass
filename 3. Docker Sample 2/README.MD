@@ -1,4 +1,4 @@
-# mainclass
+# MainClass{}
 ### Spring Boot + Docker + Mysql
 
  - Java 8
@@ -58,3 +58,7 @@ Order Service contains REST services to add and list orders.
 ```sh
 http://localhost:5000/swagger-ui.html
 ```
+
+MSc Carlos Avendaño
+
+https://www.linkedin.com/in/carlos-alberto-avenda%C3%B1o-arango-534b0a137/

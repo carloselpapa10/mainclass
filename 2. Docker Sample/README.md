@@ -1,5 +1,4 @@
-# mainclass
-### Microservices Architecture
+# MainClass{}
 
 #### Spring Boot + Docker
 
@@ -41,3 +40,7 @@ http://localhost:5001/swagger-ui.html#/
 ```
 
 > Note: If you follow the attached image sequence you will be able to restart the test-comsumer-service. 
+
+MSc Carlos Avendaño
+
+https://www.linkedin.com/in/carlos-alberto-avenda%C3%B1o-arango-534b0a137/

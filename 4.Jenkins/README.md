@@ -1,4 +1,4 @@
-# mainclass
+# MainClass{}
 ### JUnit Tests + Docker + Jenkins
 
  - Java 8
@@ -56,3 +56,7 @@ $ docker rm jenkins_blueocean
 $ docker rm mysql
 $ docker rm order-service-app
 ```
+
+MSc Carlos Avendaño
+
+https://www.linkedin.com/in/carlos-alberto-avenda%C3%B1o-arango-534b0a137/
